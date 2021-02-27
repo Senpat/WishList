@@ -46,9 +46,7 @@ const List = ({props}) => {
         <div class="innerlist">
             <h1 class="title">MY WISHLIST</h1>
             <Box props={props} />
-            <form class="textbox">
-                <input type='text' value={textbox} onChange={(e) => changeText(e)} />
-            </form>
+            <input type='text' class="textbox" value={textbox} onChange={(e) => changeText(e)} />
             <button class="addbutton" onClick={addToList}>Add</button>
             <button class="submitbutton" onClick={submit}>Submit</button>
         </div>
