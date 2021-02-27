@@ -22,11 +22,85 @@ code {
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .innerlist{
+  width: 400px;
+  height: 540px;
   background-color: #ffc0cb;
-  margin: 10px 30vw 10px 30vw;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.innerlist > * {
+  margin: 5px 0px 5px 0px;
+}
+
+.innerlist > button{
+  background-color: #82df82;
+  border-color: #82df82;
+  border-radius: 5px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.addbutton{
+  width: 150px;
+}
+
+.submitbutton{
+  width: 300px;
+}
+
+.title{
+  font-size: small;
+}
+
+.box{
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.box *{
+  background-color: white;
+  border: none;
+  border-color: white !important;
+}
+
+.box button:focus{
+  border:none;
+  border:white !important;
+  outline: 0;
+}
+
+.box button:hover{
+  cursor: pointer;
+}
+
+.textbox *{
+  width:298px;
+  font-size: 20px;
+}
+
+.textbox input[type=text]{
+  outline: 0;
+  border-width: 1px;
+  border-radius: 3px;
+}
+
+.textbox input[type=text]:focus{
+  border:3px solid #87ceeb;
+  
 }

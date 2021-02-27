@@ -12,18 +12,18 @@ const reducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case ADD_ITEM:
       return {
-        //wishList
-        //wishList: ,
+        wishList: state.wishList.concat([action.payload]),
       };
-    case DELETE_ITEM:
+    case DELETE_ITEM:                                         //the payload is the index of the item to remove
+      let ret = [...state.wishList]
+      ret.splice(action.payload,1)
       return {
-        //wishList
-        //wishList: ,
+        //wishList: state.wishList.filter((e) => {return e !== action.payload}),
+        wishList: ret,
       };
     default:
       return {
-        //wishList
-        //wishList: ,
+        wishList: [],
       };
   }
 };
