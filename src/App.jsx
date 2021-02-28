@@ -6,13 +6,12 @@ import {useState} from 'react'
 
 
 const App = (props) => {
-    //console.log(props.wishList)
+
     return (
         <div class="whole">
             <List props={props} />
         </div>
-        
-        
+
     )
 }
 
@@ -73,7 +72,6 @@ const Box = ({props}) => {
 
 
 const mapStateToProps = (state) => {
-    //console.log(state)
     return {
         wishList: state.wishList
     }
@@ -82,13 +80,11 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
     add: addItem,
     delete: deleteItem,
-    submit: () => {return{
-        type:'SUBMIT_FORM',
-    }}
+    submit: () => {
+        return {
+            type:'SUBMIT_FORM',
+        }
+    }
 }
-    
-    
-//const mapDispatchToProps = () => {addItem,deleteItem}
 
-//export default App
 export default connect(mapStateToProps,mapDispatchToProps)(App)
